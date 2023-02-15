@@ -1,0 +1,316 @@
+@import "./reset-second.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@100&display=swap");
+
+body {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 22px;
+  background-color: black;
+  border-radius: 30px;
+
+  font-size: 18px;
+  color: white;
+
+  transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(33, 33, 33);
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+  background-color: black;
+}
+
+/* Кнопка "отправить сообщение" */
+
+.btn-message {
+  display: inline-block;
+  padding: 7px 22px;
+  background-color: black;
+  border-radius: 30px;
+
+  font-size: 18px;
+  color: white;
+
+  transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+.btn-message:hover,
+.btn-message:focus {
+  background-color: rgb(33, 33, 33);
+}
+
+.btn-message:active {
+  position: relative;
+  top: 1px;
+  background-color: black;
+}
+
+/* Всплывающее окно при нажатии на кнопку */
+
+.pop-up {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.pop-up.active {
+  display: block;
+}
+
+.pop-up-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up-body {
+  margin: auto;
+  padding: 100px 15px 110px 15px;
+  width: 500px;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pop-up-body p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e2d2d;
+  margin-top: -20px;
+  margin-bottom: 80px;
+}
+
+.pop-up-input-text {
+  display: block;
+  width: 330px;
+  padding: 17px 20px;
+  margin: 25px auto 0px auto;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.pop-up-textarea-message-text {
+  display: block;
+  width: 330px;
+  padding: 60px 20px;
+  margin: 25px auto 0px auto;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  resize: none;
+  overflow: auto;
+  outline: none;
+}
+
+.pop-up-body button {
+  padding: 10px 50px;
+  margin: 60px auto 0px auto;
+  margin-bottom: -20px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.pop-up-close {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+
+/* Header */
+
+.header {
+  padding-top: 46px;
+  background-color: #f1f1f1;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 76px;
+}
+
+.logo {
+  position: relative;
+  padding: 0 12px 3px 0;
+
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  line-height: 1;
+}
+
+.logo::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: violet;
+  border-radius: 50%;
+}
+
+/* Навигация */
+
+.nav-list {
+  display: flex;
+  column-gap: 50px;
+  font-size: 14 px;
+  font-weight: 500;
+}
+
+.nav-button {
+  display: none;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link.active {
+  color: #606060;
+}
+
+/* Контент для Header */
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.header-content {
+  margin-top: 124px;
+  max-width: 500px;
+}
+
+.header-heading {
+  margin-bottom: 20px;
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.header-content p {
+  line-height: 2;
+}
+
+/* Мои работы */
+
+.portfolio {
+  padding: 90px 0;
+}
+
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.work {
+  text-align: center;
+}
+
+.work p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.work + .work {
+  margin-top: 90px;
+}
+
+.works-image {
+  margin-bottom: 40px;
+}
+
+.work-title {
+  font-size: 18px;
+}
+
+/* Телеграмчики, инстаграмчики */
+
+.contacts {
+  padding: 90px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.title-1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contacts-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.contacts-content p + p {
+  margin-top: 1em;
+}
+
+.contacts-button {
+  margin-bottom: 80px;
+}
+
+.contacts-social {
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contacts-footer {
+  color: #828282;
+}
+
+/* Белая полоса снизу */
+
+.underground {
+  margin-bottom: 90px;
+}

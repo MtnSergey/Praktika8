@@ -1,0 +1,93 @@
+@import "./reset-third.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@100&display=swap");
+
+/* Авторизация */
+
+.autorisation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.autorisation-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.autorisation-body {
+  margin: auto;
+  padding: 100px 15px 110px 15px;
+  width: 500px;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.autorisation-body p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e2d2d;
+  margin-top: -20px;
+  margin-bottom: 80px;
+}
+
+.autorisation-input-text {
+  display: block;
+  width: 330px;
+  padding: 17px 20px;
+  margin: 25px auto 0px auto;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.autorisation-entry button {
+  padding: 10px 50px;
+  margin: 60px auto 0px auto;
+  margin-bottom: -20px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.autorisation-close {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+
+.autorisation-entry {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: black;
+  border-radius: 30px;
+
+  font-size: 18px;
+  color: white;
+
+  transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+.autorisation-entry:hover,
+.autorisation-entry:focus {
+  background-color: rgb(33, 33, 33);
+}
+
+.autorisation-entry:active {
+  position: relative;
+  top: 1px;
+  background-color: black;
+}
